@@ -1,8 +1,8 @@
-import React, { useState } from `react`;
-import Home from `./pages/Home`;
-import Login from `./pages/Login`;
-import Profile from `./pages/Profile`;
-import NavBar from `./NavBar`;
+import React, { useState } from 'react';
+import Home from './pages/Home';
+import Login from './pages/Login';
+import Profile from './pages/Profile';
+import NavBar from './NavBar';
 
 export default function Container() {
 
