@@ -1,0 +1,25 @@
+/* Navigation Bar */
+
+.navbar-nav {
+    margin-left: 67%;
+    color: white;
+}
+
+.navbar-brand {
+    margin-left: 20px;
+    white-space: 2px;   
+}
+
+.nav-item {
+    padding: 15px;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}

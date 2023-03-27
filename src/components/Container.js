@@ -27,6 +27,7 @@ export default function Container() {
         setPage(page);
     };
 
+    // returns NavBar with the component rendering functionality
     return (
         <div>
             <NavBar pageHandler={pageHandler} />
