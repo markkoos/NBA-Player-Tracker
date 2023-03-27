@@ -8,15 +8,15 @@ export default function NavBar({ pageHandler }) {
             <ul className="navbar-nav mr-auto">
 
                 <li className="nav-item">
-                <a href="#aboutme" onClick={() => pageHandler('')}>Home</a>
+                <a href="#home" onClick={() => pageHandler('')}>Home</a>
                 </li>
 
                 <li className="nav-item">
-                <a href="#projects" onClick={() => pageHandler('Profile')}>Profile</a>
+                <a href="#profile" onClick={() => pageHandler('Profile')}>Profile</a>
                 </li>
 
                 <li className="nav-item">
-                <a href="#Resume" onClick={() => pageHandler('Login')}>Login</a>
+                <a href="#login" onClick={() => pageHandler('Login')}>Login</a>
                 </li>
 
             </ul>
