@@ -4,37 +4,37 @@ export default function Profile() {
     return (
         <div>
             <br></br>
-            <div class="jumbotron jumbotron-fluid">
-                <div class="container-fluid">
-                <p class="pfp"><img class="rounded-circle" alt="avatar1" src="http://via.placeholder.com/250x250" /> Render Username Here</p>
-                <hr class="my-4"></hr>
+            <div className="jumbotron jumbotron-fluid">
+                <div className="container-fluid">
+                <p className="pfp"><img className="rounded-circle" alt="avatar1" src="http://via.placeholder.com/250x250" /> Render Username Here</p>
+                <hr className="my-4"></hr>
                 </div>
                 
-                <div class="card-container">
+                <div className="card-container">
                 {/* ------------------------------------Rendering Each Card---------------------------------- */}
-                    <div class="card">
-                        <img class="card-img-top" src="http://via.placeholder.com/150x150" alt="Card image cap"></img>
-                        <div class="card-body">
-                            <h5 class="card-title">Player Name</h5>
-                            <p class="card-text">Example text</p>
+                    <div className="card">
+                        <img className="card-img-top" src="http://via.placeholder.com/150x150" alt="Card image cap"></img>
+                        <div className="card-body">
+                            <h5 className="card-title">Player Name</h5>
+                            <p className="card-text">Example text</p>
                         </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">PPG: </li>
-                            <li class="list-group-item">RPG: </li>
-                            <li class="list-group-item">APG: </li>
+                        <ul className="list-group list-group-flush">
+                            <li className="list-group-item">PPG: </li>
+                            <li className="list-group-item">RPG: </li>
+                            <li className="list-group-item">APG: </li>
                         </ul>
                     </div>
                 {/* ------------------------------------Rendering Each Card---------------------------------- */}
-                    <div class="card">
-                        <img class="card-img-top" src="http://via.placeholder.com/150x150" alt="Card image cap"></img>
-                        <div class="card-body">
-                            <h5 class="card-title">Player Name</h5>
-                            <p class="card-text">Example text</p>
+                    <div className="card">
+                        <img className="card-img-top" src="http://via.placeholder.com/150x150" alt="Card image cap"></img>
+                        <div className="card-body">
+                            <h5 className="card-title">Player Name</h5>
+                            <p className="card-text">Example text</p>
                         </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">PPG: </li>
-                            <li class="list-group-item">RPG: </li>
-                            <li class="list-group-item">APG: </li>
+                        <ul className="list-group list-group-flush">
+                            <li className="list-group-item">PPG: </li>
+                            <li className="list-group-item">RPG: </li>
+                            <li className="list-group-item">APG: </li>
                         </ul>
                     </div>
                 </div>
