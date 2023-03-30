@@ -13,7 +13,7 @@ export default function Profile() {
                 <div className="card-container">
                 {/* ------------------------------------Rendering Each Card---------------------------------- */}
                     <div className="card">
-                        <img className="card-img-top" src="http://via.placeholder.com/150x150" alt="Card image cap"></img>
+                        <img className="card-img-top" src="http://via.placeholder.com/150x150" alt="player card"></img>
                         <div className="card-body">
                             <h5 className="card-title">Player Name</h5>
                             <p className="card-text">Example text</p>
@@ -26,7 +26,7 @@ export default function Profile() {
                     </div>
                 {/* ------------------------------------Rendering Each Card---------------------------------- */}
                     <div className="card">
-                        <img className="card-img-top" src="http://via.placeholder.com/150x150" alt="Card image cap"></img>
+                        <img className="card-img-top" src="http://via.placeholder.com/150x150" alt="player card"></img>
                         <div className="card-body">
                             <h5 className="card-title">Player Name</h5>
                             <p className="card-text">Example text</p>
