@@ -39,3 +39,14 @@ a {
     display:flex;
     padding: 40px;
 }
+
+/* Login Page */
+
+.register-link {
+    color: black;
+}
+
+.a2 {
+    color: blue;
+    font-size: 14px;
+}
