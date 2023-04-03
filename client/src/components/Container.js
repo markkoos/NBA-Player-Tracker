@@ -3,6 +3,7 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import Profile from './pages/Profile';
 import NavBar from './NavBar';
+import Register from './pages/Register';
 
 export default function Container() {
 
@@ -11,7 +12,7 @@ export default function Container() {
 
     // checks value of currentPage and returns imported component
     const renderComponent = () => {
-        if (currentPage === ``) {
+        if (currentPage === `Home`) {
             return <Home />
         } 
         if (currentPage === `Login`) {
@@ -19,7 +20,7 @@ export default function Container() {
         }
         if (currentPage === `Profile`) {
             return <Profile />
-        }  
+        } 
     };
 
     // function sets value of currentPage to what is selected on the NavBar
