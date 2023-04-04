@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; 
 
 export default function Register() {
     return (
@@ -14,7 +15,7 @@ export default function Register() {
             <br></br>
             <center><input className="btn btn-primary" type="submit" value="Submit"></input></center>
             <br></br>
-            <center><a className="login-link" href="youtube.com">Already have an account? Click here to login</a></center>            
+            <center><p className="register-link">Already have an account? <Link to="/login"><span className="a2">Login</span></Link></p></center>            
         </div>
     )
 }
