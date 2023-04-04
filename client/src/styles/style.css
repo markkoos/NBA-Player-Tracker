@@ -1,7 +1,7 @@
 /* Navigation Bar */
 
 .navbar-nav {
-    margin-left: 77%;
+    margin-left: 70%;
     color: white;
 }
 
@@ -11,7 +11,7 @@
 }
 
 .nav-item {
-    padding: 15px;
+    padding: 13px;
 }
 
 ul {
@@ -22,6 +22,11 @@ a {
     color: white;
     text-decoration: none;
     font-size: 14px;
+}
+
+.logo {
+    max-width: 20%;
+    max-height: 20%;
 }
 
 /* Profile Page */
