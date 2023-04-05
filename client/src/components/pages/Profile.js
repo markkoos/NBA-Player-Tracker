@@ -5,7 +5,7 @@ export default function Profile() {
         <div>
             <br></br>
             <div className="jumbotron jumbotron-fluid">
-                <div className="container-fluid">
+                <div className="hero container-fluid">
                 <p className="pfp"><img className="rounded-circle" alt="avatar1" src="http://via.placeholder.com/250x250" /> Render Username Here</p>
                 <hr className="my-4"></hr>
                 </div>

@@ -3,7 +3,6 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import Profile from './pages/Profile';
 import NavBar from './NavBar';
-import Register from './pages/Register';
 
 export default function Container() {
 

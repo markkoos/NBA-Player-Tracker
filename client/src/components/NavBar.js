@@ -4,8 +4,8 @@ import Logo from '../assets/bball.png';
 
 export default function NavBar({ pageHandler }) {
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-            <span className="navbar-brand"><img className="logo" src={Logo}></img>NBA PLAYER TRACKER</span>
+        <nav className="navbar navbar-custom navbar-expand-lg">
+            <span className="navbar-brand"><img className="logo" src={Logo} alt="basketball logo"></img>NBA PLAYER TRACKER</span>
             <ul className="navbar-nav mr-auto">
 
                 <li className="nav-item">
