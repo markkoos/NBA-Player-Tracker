@@ -1,13 +1,22 @@
+/* Global */
+
+
+
 /* Navigation Bar */
+
+.navbar {
+    background-color: rgba(1, 1, 5, 0.977);
+}
 
 .navbar-nav {
     margin-left: 70%;
-    color: white;
+    color: rgb(232, 190, 111);
 }
 
 .navbar-brand {
     margin-left: 20px;
     white-space: 2px;   
+    color: rgb(232, 190, 111);
 }
 
 .nav-item {
@@ -19,7 +28,7 @@ ul {
 }
 
 a {
-    color: white;
+    color: rgb(232, 190, 111);
     text-decoration: none;
     font-size: 14px;
 }
@@ -30,6 +39,14 @@ a {
 }
 
 /* Profile Page */
+
+.hero {
+    background-image: url("../assets/bballbackground.jpg");
+    background-size: 100%;
+    background-position-y: 16%;
+    background-position-x: 95%;
+    
+}
 
 .pfp {
     font-size: 50px;
