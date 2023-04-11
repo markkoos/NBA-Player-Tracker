@@ -8,7 +8,7 @@ import Auth from '../../utils/auth';
 export default function Register() {
 
     // set initial state of the form
-    const [formData, setformData] = useState({ email: '', username: '', password: ''})
+    const [formData, setformData] = useState({ username: '', email: '', password: '' });
     // set state for form validation
     const [validated] = useState(false);
     // set state for alert
@@ -34,6 +34,7 @@ export default function Register() {
         }
 
         try {
+            console.log(formData)
             const { data } = await addUser({
                 variables: { ...formData }
             });
@@ -42,17 +43,13 @@ export default function Register() {
                 console.log(error);
             };
 
+            await console.log(data)
             Auth.login(data.addUser.token);
         } catch (err) {
             console.log(err);
             setShowAlert(true);
         }
 
-        setformData({
-            email: '',
-            username: '',
-            password: '',
-        });
     };
 
     return (
@@ -60,11 +57,23 @@ export default function Register() {
             <br />
             <center><h2>Register</h2></center>
             <br />
-            <Form noValidate validated={validated} onSubmit={handleSubmit} className="form title">
+            <center><Form noValidate validated={validated} onSubmit={handleSubmit} className="form title">
                 {/* show alert if server response is bad */}
                 <Alert dismissible onClose={() => setShowAlert(false)} show={showAlert} variant='danger'>
                 Something went wrong with your signup!
                 </Alert>
+
+                <Form.Group className='input'>
+                <Form.Control
+                    type='text'
+                    placeholder='Username'
+                    name='username'
+                    onChange={handleInput}
+                    value={formData.username}
+                    required
+                />
+                <Form.Control.Feedback type='invalid'>Username is required!</Form.Control.Feedback>
+                </Form.Group>
 
                 <Form.Group className='input'>
                 <Form.Control
@@ -76,18 +85,6 @@ export default function Register() {
                     required
                 />
                 <Form.Control.Feedback type='invalid'>Email is required!</Form.Control.Feedback>
-                </Form.Group>
-
-                <Form.Group className='input'>
-                <Form.Control
-                    type='text'
-                    placeholder='Username'
-                    name='username'
-                    onChange={handleInput}
-                    value={formData.firstName}
-                    required
-                />
-                <Form.Control.Feedback type='invalid'>Username is required!</Form.Control.Feedback>
                 </Form.Group>
 
                 <Form.Group className='input'>
@@ -108,7 +105,7 @@ export default function Register() {
                 className="Submit btn btn-danger">
                     Submit
                 </Button>                
-            </Form>            
+            </Form></center>            
             <center><p className="register-link">Already have an account? <Link to="/login"><span className="a2">Login</span></Link></p></center>
             <br />
         </div>
