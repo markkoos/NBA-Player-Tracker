@@ -11,7 +11,7 @@ export default function Container() {
 
     // checks value of currentPage and returns imported component
     const renderComponent = () => {
-        if (currentPage === ``) {
+        if (currentPage === `Home`) {
             return <Home />
         } 
         if (currentPage === `Login`) {
@@ -19,7 +19,7 @@ export default function Container() {
         }
         if (currentPage === `Profile`) {
             return <Profile />
-        }  
+        } 
     };
 
     // function sets value of currentPage to what is selected on the NavBar

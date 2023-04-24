@@ -1,17 +1,26 @@
+/* Global */
+
+
+
 /* Navigation Bar */
 
+.navbar {
+    background-color: rgba(1, 1, 5, 0.977);
+}
+
 .navbar-nav {
-    margin-left: 77%;
-    color: white;
+    margin-left: 70%;
+    color: rgb(232, 190, 111);
 }
 
 .navbar-brand {
     margin-left: 20px;
     white-space: 2px;   
+    color: rgb(232, 190, 111);
 }
 
 .nav-item {
-    padding: 15px;
+    padding: 13px;
 }
 
 ul {
@@ -19,12 +28,25 @@ ul {
 }
 
 a {
-    color: white;
+    color: rgb(232, 190, 111);
     text-decoration: none;
     font-size: 14px;
 }
 
+.logo {
+    max-width: 20%;
+    max-height: 20%;
+}
+
 /* Profile Page */
+
+.hero {
+    background-image: url("../assets/bballbackground.jpg");
+    background-size: 100%;
+    background-position-y: 16%;
+    background-position-x: 95%;
+    
+}
 
 .pfp {
     font-size: 50px;
@@ -38,4 +60,15 @@ a {
 .card-container {
     display:flex;
     padding: 40px;
+}
+
+/* Login Page */
+
+.register-link {
+    color: black;
+}
+
+.a2 {
+    color: blue;
+    font-size: 14px;
 }
