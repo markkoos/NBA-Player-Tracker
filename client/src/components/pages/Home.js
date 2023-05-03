@@ -33,16 +33,18 @@ export default function Home() {
                 <input type="text" placeholder="Search for a player" value={searchQuery} onChange={handleSearch}></input>
                 <button type="submit">Search</button>
                 </center>
-            </form>
+            </form>        
             {searchData && searchData.map((player) => (
-                <center>
-                <br />
-                <div>
-                    <ul>
-                        <li key={player.id}>{player.first_name} {player.last_name}</li>
-                    </ul>
+            <div className="card mx-auto" key="0">
+                <div className="card-header" key={player.id}>
+                    {player.first_name} {player.last_name}
                 </div>
-                </center>
+                <ul className="list-group list-group-flush" key="0">
+                    <li className="list-group-item" key="1">{player.team.abbreviation}</li>
+                    <li className="list-group-item" key="2">{player.height_feet}'{player.height_inches}</li>
+                    <li className="list-group-item" key="3">{player.weight_pounds}</li>
+                </ul>
+            </div>  
             ))}
         </div>
     )
