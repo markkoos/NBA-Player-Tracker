@@ -72,3 +72,18 @@ a {
     color: blue;
     font-size: 14px;
 }
+
+/* Home Page */
+
+.playerList {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.card {
+    padding-top: 30px;
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+    margin-bottom: 10px; /* Added */
+    width: 18rem;   
+}
