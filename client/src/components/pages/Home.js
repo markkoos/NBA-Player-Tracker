@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import Card from 'react-bootstrap/Card';
+import ListGroup from 'react-bootstrap/ListGroup';
 
 export default function Home() {
 
@@ -35,7 +36,8 @@ export default function Home() {
                 <button type="submit">Search</button>
                 </center>
             </form> 
-            <br />           
+            <br />
+            {/* for each player found in search results, render their info onto a player card */}
             {searchData && searchData.map((player) => (
                 <Card className="text-white bg-dark mb-3" style={{width: '18rem'}} key={player.id}>
                     <div className="card-header" key={Math.random()}>{player.team.full_name}</div>
