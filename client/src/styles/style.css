@@ -23,7 +23,7 @@
     padding: 13px;
 }
 
-ul {
+.navList{
     list-style: none;
 }
 
@@ -52,7 +52,7 @@ a {
     font-size: 50px;
 }
 
-.card {
+.playerCard {
     margin-left: 20px;
     width: 12rem;
 }
@@ -81,9 +81,8 @@ a {
 }
 
 .card {
-    padding-top: 30px;
     margin: 0 auto; /* Added */
     float: none; /* Added */
     margin-bottom: 10px; /* Added */
-    width: 18rem;   
 }
+

@@ -1,6 +1,6 @@
 import decode from 'jwt-decode';
 
-class Auth {
+class authClass {
     // decodes the user data from stored token
     getUser() {
         return decode(this.getToken());
@@ -30,4 +30,6 @@ class Auth {
     }
 }
 
-export default new Auth();
+const Auth = new authClass();
+
+export default Auth;
