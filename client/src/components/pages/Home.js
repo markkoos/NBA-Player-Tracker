@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import Card from 'react-bootstrap/Card';
 
 export default function Home() {
 
@@ -33,19 +34,19 @@ export default function Home() {
                 <input type="text" placeholder="Search for a player" value={searchQuery} onChange={handleSearch}></input>
                 <button type="submit">Search</button>
                 </center>
-            </form>        
+            </form> 
+            <br />           
             {searchData && searchData.map((player) => (
-            <div className="card mx-auto" key="0">
-                <div className="card-header" key={player.id}>
-                    {player.first_name} {player.last_name}
-                </div>
-                <ul className="list-group list-group-flush" key="0">
-                    <li className="list-group-item" key="1">{player.team.abbreviation}</li>
-                    <li className="list-group-item" key="2">{player.height_feet}'{player.height_inches}</li>
-                    <li className="list-group-item" key="3">{player.weight_pounds}</li>
-                </ul>
-            </div>  
+                <Card className="text-white bg-dark mb-3" style={{width: '18rem'}} key={player.id}>
+                    <div className="card-header" key={Math.random()}>{player.team.full_name}</div>
+                    <div className="card-header" key={Math.random()}><h5 className="card-title" key={Math.random()}>{player.first_name} {player.last_name}</h5></div>
+                    <ul variant="flush bg-dark mb-3" key={Math.random()}>
+                        <li className="searchLi" key={Math.random()}>{player.height_feet}'{player.height_inches}</li>
+                        <li className="searchLi" key={Math.random()}>{player.position}</li>    
+                        <li className="searchLi" key={Math.random()}>{player.weight_pounds} lbs</li>
+                    </ul>    
+                </Card>     
             ))}
         </div>
-    )
+    )   
 }
