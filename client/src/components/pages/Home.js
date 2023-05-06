@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import Card from 'react-bootstrap/Card';
-import ListGroup from 'react-bootstrap/ListGroup';
+import ListGroup from 'react-bootstrap/ListGroup'
 
 export default function Home() {
 
@@ -30,10 +30,10 @@ export default function Home() {
             <form className="form title" onSubmit={fetchData}>
                 <br></br>
                 <center>
-                <h1>Search for Players</h1>
+                <h3>Search for Players</h3>
                 {/* Search Bar to look up Players */}
-                <input type="text" placeholder="Search for a player" value={searchQuery} onChange={handleSearch}></input>
-                <button type="submit">Search</button>
+                <input type="text" placeholder="ie. Stephen Curry" value={searchQuery} onChange={handleSearch}></input>
+                <button type="button">Submit</button>
                 </center>
             </form> 
             <br />
@@ -42,11 +42,11 @@ export default function Home() {
                 <Card className="text-white bg-dark mb-3" style={{width: '18rem'}} key={player.id}>
                     <div className="card-header" key={Math.random()}>{player.team.full_name}</div>
                     <div className="card-header" key={Math.random()}><h5 className="card-title" key={Math.random()}>{player.first_name} {player.last_name}</h5></div>
-                    <ul variant="flush bg-dark mb-3" key={Math.random()}>
-                        <li className="searchLi" key={Math.random()}>{player.height_feet}'{player.height_inches}</li>
-                        <li className="searchLi" key={Math.random()}>{player.position}</li>    
-                        <li className="searchLi" key={Math.random()}>{player.weight_pounds} lbs</li>
-                    </ul>    
+                    <ListGroup variant="flush" key={Math.random()}>
+                        <ListGroup.Item className="searchLi bg-dark text-white" key={Math.random()}>{player.height_feet}'{player.height_inches}</ListGroup.Item>
+                        <ListGroup.Item className="searchLi bg-dark text-white" key={Math.random()}>{player.position}</ListGroup.Item>    
+                        <ListGroup.Item className="searchLi bg-dark text-white" key={Math.random()}>{player.weight_pounds} lbs</ListGroup.Item>
+                    </ListGroup>    
                 </Card>     
             ))}
         </div>

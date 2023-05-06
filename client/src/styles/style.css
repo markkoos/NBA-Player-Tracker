@@ -19,6 +19,10 @@
     color: rgb(232, 190, 111);
 }
 
+.navbar-brand:hover {
+    color: rgb(232, 190, 111);
+}
+
 .nav-item {
     padding: 13px;
 }
