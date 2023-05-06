@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup'
+import Nav from 'react-bootstrap/Nav';
 
 export default function Home() {
 
@@ -39,16 +40,43 @@ export default function Home() {
             <br />
             {/* for each player found in search results, render their info onto a player card */}
             {searchData && searchData.map((player) => (
-                <Card className="text-white bg-dark mb-3" style={{width: '18rem'}} key={player.id}>
-                    <div className="card-header" key={Math.random()}>{player.team.full_name}</div>
-                    <div className="card-header" key={Math.random()}><h5 className="card-title" key={Math.random()}>{player.first_name} {player.last_name}</h5></div>
-                    <ListGroup variant="flush" key={Math.random()}>
-                        <ListGroup.Item className="searchLi bg-dark text-white" key={Math.random()}>{player.height_feet}'{player.height_inches}</ListGroup.Item>
-                        <ListGroup.Item className="searchLi bg-dark text-white" key={Math.random()}>{player.position}</ListGroup.Item>    
-                        <ListGroup.Item className="searchLi bg-dark text-white" key={Math.random()}>{player.weight_pounds} lbs</ListGroup.Item>
-                    </ListGroup>    
-                </Card>     
-            ))}
+                <Card className=" text-white bg-dark mb-3" style={{width: '48rem'}} key={player.id}>
+                    <Card.Header>
+                    <Nav variant="tabs" defaultActiveKey="#first" key={Math.random()}>
+                        <Nav.Item>
+                            <Nav.Link href="#disabled" disabled>
+                                {player.team.abbreviation}
+                            </Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item>
+                            <Nav.Link href="#disabled" disabled>
+                                {player.first_name} {player.last_name}
+                            </Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item>
+                            <Nav.Link href="#disabled" disabled>
+                                {player.height_feet}'{player.height_inches}
+                            </Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item>
+                            <Nav.Link href="#disabled" disabled>
+                                {player.position}
+                                </Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item>
+                            <Nav.Link href="#disabled" disabled>
+                                {player.weight_pounds} lbs
+                            </Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item>
+                            <Nav.Link href="#disabled" disabled>
+                                <button type="button" class="btn btn-warning">Save Player</button>
+                            </Nav.Link>
+                        </Nav.Item>
+                    </Nav>
+                </Card.Header>
+                </Card>   
+            ))} 
         </div>
     )   
 }
