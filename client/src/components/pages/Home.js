@@ -9,10 +9,12 @@ export default function Home() {
     const [searchQuery, setQuery] = useState('');
     // useState for the returned search data from the API
     const [searchData, setData] = useState([]);
+    // useState for the player that user wants to save to their profile
+    const [savedPlayer, setPlayer] = useState({ player_id: '', first_name: '', last_name: '', })
 
     // handle function for search bar 
     const handleSearch = (e) => {
-        setQuery(e.target.value);
+        setQuery(e.target.value);   
       }
 
     // get request for the balldontlie API
@@ -40,7 +42,7 @@ export default function Home() {
             <br />
             {/* for each player found in search results, render their info onto a player card */}
             {searchData && searchData.map((player) => (
-                <Card className=" text-white bg-dark mb-3" style={{width: '48rem'}} key={player.id}>
+                <Card className=" text-white bg-dark mb-3" style={{width: '47rem'}} key={player.id}>
                     <Card.Header>
                     <Nav variant="tabs" defaultActiveKey="#first" key={Math.random()}>
                         <Nav.Item>
@@ -70,7 +72,7 @@ export default function Home() {
                         </Nav.Item>
                         <Nav.Item>
                             <Nav.Link href="#disabled" disabled>
-                                <button type="button" class="btn btn-warning">Save Player</button>
+                                <button type="button" className="btn btn-warning">Save Player</button>
                             </Nav.Link>
                         </Nav.Item>
                     </Nav>
