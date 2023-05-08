@@ -1,10 +1,9 @@
 const { Schema, model } = require('mongoose');
 
 const playerSchema = new Schema({
-    _id: {
-        type: Number,
+    player_id: {
+        type: String,
         required: true,
-        trim: true,
     },
     first_name: {
         type: String,
