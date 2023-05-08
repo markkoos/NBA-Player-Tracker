@@ -31,7 +31,7 @@ export const ADD_PLAYER = gql`
             username
             email
             players {
-                _id
+                player_id
                 first_name
                 last_name
             }
