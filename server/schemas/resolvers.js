@@ -47,6 +47,17 @@ const resolvers = {
             // returns both user and token
             return { user, token };
         },
+        addPlayer: async (parent, { _id, input }) => {
+            // finds user based on id then adds player info into players array
+            const addedPlayer = await User.findOneAndUpdate(
+                {_id: _id },
+                { $push: { players: input }},
+                { new: true, runValidators: true },
+            );
+
+            // returns the user with the added Player
+            return addedPlayer;
+        }, 
     }
 }
 
