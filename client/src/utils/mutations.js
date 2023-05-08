@@ -11,7 +11,7 @@ export const ADD_USER = gql`
             }
         }
     }
-`
+`;
 
 export const LOGIN_USER = gql`
     mutation login($email: String!, $password: String!) {
@@ -22,4 +22,19 @@ export const LOGIN_USER = gql`
             }
         }
     }
-`
+`;
+
+export const ADD_PLAYER = gql`
+    mutation addPlayer($_id: ID!, $input: PlayerInput) {
+        addPlayer(_id: $_id, input: $input) {
+            _id
+            username
+            email
+            players {
+                _id
+                first_name
+                last_name
+            }
+        }
+    }
+`;
