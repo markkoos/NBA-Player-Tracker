@@ -6,7 +6,7 @@ export default function NavBar({ pageHandler }) {
     return (
         <nav className="navbar navbar-custom navbar-expand-lg">
             <span className="navbar-brand"><img className="logo" src={Logo} alt="basketball logo"></img>NBA PLAYER TRACKER</span>
-            <ul className="navbar-nav mr-auto">
+            <ul className="navbar-nav mr-auto navList">
 
                 <li className="nav-item">
                 <a href="home" onClick={() => pageHandler('Home')}>HOME</a>

@@ -19,11 +19,15 @@
     color: rgb(232, 190, 111);
 }
 
+.navbar-brand:hover {
+    color: rgb(232, 190, 111);
+}
+
 .nav-item {
     padding: 13px;
 }
 
-ul {
+.navList{
     list-style: none;
 }
 
@@ -52,7 +56,7 @@ a {
     font-size: 50px;
 }
 
-.card {
+.playerCard {
     margin-left: 20px;
     width: 12rem;
 }
@@ -72,3 +76,24 @@ a {
     color: blue;
     font-size: 14px;
 }
+
+/* Home Page */
+
+.playerList {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.card {
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+    margin-bottom: 10px; /* Added */
+}
+
+.playerName {
+    text-align: center;
+}
+
+
+
+
