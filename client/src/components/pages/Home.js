@@ -29,55 +29,52 @@ export default function Home() {
     
 
     return (
-        <div>
-            <form className="form title" onSubmit={fetchData}>
-                <br></br>
-                <center>
-                <h3>Search for Players</h3>
-                {/* Search Bar to look up Players */}
-                <input type="text" placeholder="ie. Stephen Curry" value={searchQuery} onChange={handleSearch}></input>
-                <button type="button">Submit</button>
-                </center>
-            </form> 
+        <div className='container'>
+
+            <div className="row">
+                <form className="form title" onSubmit={fetchData}>
+                    <br></br>
+                    <center>
+                    <h3>Search for Players</h3>
+                    {/* Search Bar to look up Players */}
+                    <div className="input-group input-group-lg">
+                        <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" placeholder="ie. Stephen Curry" value={searchQuery} onChange={handleSearch}></input>
+                        <button type="button" className="btn btn-dark">🔍</button>
+                        <button type="button" className="btn btn-warning">💾</button>
+                    </div>
+                    </center>
+                </form>
+            </div>
+
             <br />
             {/* for each player found in search results, render their info onto a player card */}
             {searchData && searchData.map((player) => (
-                <Card className=" text-white bg-dark mb-3" style={{width: '47rem'}} key={player.id}>
+                <Card className="text-white bg-dark mb-3" style={{width: '81rem'}} key={player.id}>
                     <Card.Header>
-                    <Nav variant="tabs" defaultActiveKey="#first" key={Math.random()}>
-                        <Nav.Item>
-                            <Nav.Link href="#disabled" disabled>
+                    <Nav className='playerData' variant="tabs" defaultActiveKey="#first" key={Math.random()}>
+                        <Nav.Item className="playerItem"> 
                                 {player.team.abbreviation}
-                            </Nav.Link>
                         </Nav.Item>
-                        <Nav.Item>
-                            <Nav.Link href="#disabled" disabled>
+                        <Nav.Item className="playerItem">
                                 {player.first_name} {player.last_name}
-                            </Nav.Link>
                         </Nav.Item>
-                        <Nav.Item>
-                            <Nav.Link href="#disabled" disabled>
+                        <Nav.Item className="playerItem">
                                 {player.height_feet}'{player.height_inches}
-                            </Nav.Link>
                         </Nav.Item>
-                        <Nav.Item>
-                            <Nav.Link href="#disabled" disabled>
-                                {player.position}
-                                </Nav.Link>
+                        <Nav.Item className="playerItem">
+                                {player.position}        
                         </Nav.Item>
-                        <Nav.Item>
-                            <Nav.Link href="#disabled" disabled>
-                                {player.weight_pounds} lbs
-                            </Nav.Link>
+                        <Nav.Item className="playerItem">    
+                                {player.weight_pounds} lbs    
                         </Nav.Item>
-                        <Nav.Item>
-                            <Nav.Link href="#disabled" disabled>
-                                <button type="button" className="btn btn-warning">Save Player</button>
-                            </Nav.Link>
+                        <Nav.Item className="playerItem">
+                                <div class="form-check">
+                                    <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="..."></input>
+                                </div>
                         </Nav.Item>
                     </Nav>
-                </Card.Header>
-                </Card>   
+                    </Card.Header>
+                </Card> 
             ))} 
         </div>
     )   

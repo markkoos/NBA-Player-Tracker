@@ -94,6 +94,13 @@ a {
     text-align: center;
 }
 
+.playerItem {
+    padding-left: 6%;
+    padding-right: 6%;
+    padding-top: 3%;
+    padding-bottom: 3%
+};
+
 
 
 
