@@ -24,13 +24,13 @@ const resolvers = {
             // returns both user and token 
             return { user, token };
         },
-        login: async (parent, { email, password }) => {
-            // finds user by email
-            const user = await User.findOne({ email });
+        login: async (parent, { username, password }) => {
+            // finds user by username
+            const user = await User.findOne({ username });
 
-            // if no user matches the email; sends an error message
+            // if no user matches the username; sends an error message
             if (!user) {
-                throw new AuthenticationError('No user with that email was found!');
+                throw new AuthenticationError('No user with that username was found!');
             };
 
             // checks that the password is correct
